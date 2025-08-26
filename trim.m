@@ -88,12 +88,13 @@ while norm(F0,inf)>tol && it<=it_max
         J(:,i) = (Fh-F0)/h;
     end
     x = x0+J\(-F0);
-    x0 = max(min(x, 1), -1); % keep inputs inside bounds
-    F0 = run_heli_ss(x0,max_att,mdl,time);
+    x = max(min(x, 1), -1); % keep inputs inside bounds
+    F0 = run_heli_ss(x,max_att,mdl,time);
     fprintf('iteration %d completed \n',it)
     disp('input:')
-    disp(x0)
+    disp(x)
     fprintf('normalized distance from tolerance: %f \n',norm(F0,inf)/tol)
+    x0 = x;
     it = it+1;
 end
 
@@ -106,16 +107,16 @@ else
     pilot_trim = [ x(1); x(2); x(3); x(4) ]; % normalized [-1,1]
     euler_trim = [ x(5); x(6); 0 ]; % normalized [-1,1]
     
+    % store trimmed initial conditions:
+    euler0 = [ euler_trim(1)*abs(max_att) euler_trim(2)*abs(max_att) euler_trim(3)*abs(max_att) ]'*pi/180; % initial attitude (roll, pitch, yaw, angles) [deg-->rad]
+    V0     = eul2rotm(euler0','XYZ')'*[ fc(1) fc(2) fc(3) ]'; % initial velocity in body frame [m/s] 
+    
     % run longer simulation and save steady state flapping angles:
     time_long = '5';
     simOut = sim(mdl, 'StopTime', time_long);
     flap_ss = pi/180*simOut.flapping(:,:,end); % hub-body axes [rad]
-    
-    % store trimmed initial conditions:
     a_0    = [ flap_ss(1) flap_ss(2) flap_ss(3) ]'; % initial flapping angles in hub-body axes [a0 a1s b1s] [rad]
-    euler0 = [ euler_trim(1)*abs(max_att) euler_trim(2)*abs(max_att) euler_trim(3)*abs(max_att) ]'*pi/180; % initial attitude (roll, pitch, yaw, angles) [deg-->rad]
-    V0     = eul2rotm(euler0','XYZ')'*[ fc(1) fc(2) fc(3) ]'; % initial velocity in body frame [m/s] 
-    
+
     % console output:
     fprintf('<strong> Main Rotor Thrust </strong>%f \n',simOut.thrust_mr(end))
     fprintf('<strong> Tail Rotor Thrust </strong>%f \n',simOut.thrust_tr(end))
