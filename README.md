@@ -12,14 +12,14 @@ The main rotor is the protagonist of the model and is described through a tip-pa
 
 
 ## Usage and examples 
-In this repository you find the simulink model of the helicopter [helicopter_sim.slx](/helicopter_sim.slx) along with the parameters file [parameters.m](/parameters.m), which contains all the necessary variables to run the model. The parameters are taken from the example helicopter featured in the famous book from Raymond Prouty[^2]. Inside the model there is one block '3D_visualization' which if uncommmented will set the simulation pace to real-time and provide a visualization of the helicopter in motion. Additionally, the block 'GCS_gamepad' provides control inputs by connecting a joystick or joypad (you will probably have to adjust the control mapping inside the block). This is all you need to run a piloted simulation of the heli.\
+In this repository you find the simulink model of the helicopter [helicopter_sim.slx](/helicopter_sim.slx) along with the parameters file [parameters.m](/parameters.m), which contains all the necessary variables to run the model. The parameters are taken from the example helicopter featured in the famous book from Raymond Prouty[^2]. Inside the model there is a block called '3D_visualization' which if uncommmented will set the simulation pace to real-time and provide a visualization of the helicopter in motion. Additionally, the block 'GCS_gamepad' provides control inputs by connecting a joystick or joypad (you will probably have to adjust the control mapping inside the block). This is all you need to run a piloted simulation of the heli.\
 Then you can find two additional scripts:\
-- 'trim.m'\
-- 'linearization.m'\
+- [trim.m](/trim.m)\
+- [linearization.m](7linearization.m)\
 
 ### Response to controls
 
-### Trim inputs and dynamic stability against forward speed
+### Stability analysis
 
 [^1]: Peter.D. Talbot et al., "A Mathematical Model for a Single Main Rotor Helicopter for Piloted Simulation", NASA T.M. 84281, 1982 [link](https://ntrs.nasa.gov/citations/19830001781)
 [^2]: Raymond Prouty, "Helicopter Performance, Stability and Control", 1986
