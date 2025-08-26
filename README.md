@@ -25,8 +25,9 @@ Then you can find two additional scripts:
 
 ### Response to controls
 By using the script [step.m](/step.m) you can test the response of the helicopter model to a step input of the controls. The script also compares it to the prediction of the linearized model.\
-Here you see an example in a forward flight condition at 100ft altitude.
-
+Here you see an example in a forward flight condition at 100ft altitude.\
+<img src="/media/lon_cyc_step_ff_60kn.png" alt="Alt text" width="250"/><img src="/media/lat_cyc_step_ff_60kn.png" alt="Alt text" width="250"/>
+<img src="/media/coll_step_ff_60kn.png" alt="Alt text" width="250"/><img src="/media/ped_step_ff_60kn.png" alt="Alt text" width="250"/>
 
 ### Stability analysis
 
