@@ -2,7 +2,7 @@
 % compare the response to a step input between the complete model and the linearized one
 
 % specify simulation model
-mdl = 'helicopter_sim.slx';
+mdl = "helicopter_sim";
 
 % disable blocks for real time sim
 set_param(mdl+"/GCS gamepad",'Commented','on')
@@ -141,3 +141,4 @@ plot(0:0.001:t,step(Delta*p_dp,0:0.001:t)*180/pi,'--','Color',cmap(3,:),'Display
 hold off
 legend()
 clear SimOut mdl Delta t time cmap ax 
+
