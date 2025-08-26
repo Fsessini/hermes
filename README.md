@@ -36,8 +36,15 @@ Here you see an example in a forward flight condition at 100ft altitude.
 ### Stability analysis
 One of the main porpouses of an aircraft model is to evaluate static and dynamic stability across the flight envelope. The script [stability.m](/stability.m) trims and linearizes the heli for a range of forward flight speeds, then saves and plots the control inputs and the eigenvalues.\
 Here we see the control inputs in level forward flight plotted against the flight speed:
+<p align="center">
 <img src="/media/cyc_input_trim_ff.png" alt="Alt text" width="300"/>
 <img src="/media/coll_input_trim_ff.png" alt="Alt text" width="300"/>
+</p>
+Here instead we have on the left the eigenvalues for the hover condition and on the right the movement of the system poles in forward flight as the speed grows from 60 to 160 knots:
+<p align="center">
+<img src="/media/eig_hov.png" alt="Alt text" width="300"/>
+<img src="/media/eig_ff.png" alt="Alt text" width="300"/>
+</p>
 
 [^1]: Peter.D. Talbot et al., "A Mathematical Model for a Single Main Rotor Helicopter for Piloted Simulation", NASA T.M. 84281, 1982 [link](https://ntrs.nasa.gov/citations/19830001781)
 [^2]: Raymond Prouty, "Helicopter Performance, Stability and Control", 1986
