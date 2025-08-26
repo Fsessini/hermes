@@ -45,6 +45,11 @@ Here instead we have on the left the eigenvalues for the hover condition and on 
 <img src="/media/eig_hov.png" alt="Alt text" width="300"/>
 <img src="/media/eig_ff.png" alt="Alt text" width="300"/>
 </p>
+We can also separate the longitudinal and lateral directional dynamics, as is customary to do for fixed wing aircraft, and confront the predicted poles:
+<p align="center">
+<img src="/media/lon_eig_ff.png" alt="Alt text" width="300"/>
+<img src="/media/lat_eig_ff.png" alt="Alt text" width="300"/>
+</p>
 
 [^1]: Peter.D. Talbot et al., "A Mathematical Model for a Single Main Rotor Helicopter for Piloted Simulation", NASA T.M. 84281, 1982 [link](https://ntrs.nasa.gov/citations/19830001781)
 [^2]: Raymond Prouty, "Helicopter Performance, Stability and Control", 1986
