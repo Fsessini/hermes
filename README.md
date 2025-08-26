@@ -45,11 +45,13 @@ Here instead we have on the left the eigenvalues for the hover condition and on 
 <img src="/media/eig_hov.png" alt="Alt text" width="350"/>
 <img src="/media/eig_ff.png" alt="Alt text" width="350"/>
 </p>
+The phugoid and dutch roll modes in hover are named like this for convenience, but they actually are, respectevely, a longitudinal/lateral and lateral/longitudinal coupled oscillation, and they later develope in the well known modes as the forward speed is increased.  
 We can also separate the longitudinal and lateral directional dynamics, as is customary to do for fixed wing aircraft, and confront the predicted poles:
 <p align="center">
 <img src="/media/lon_eig_ff.png" alt="Alt text" width="350"/>
 <img src="/media/lat_eig_ff.png" alt="Alt text" width="350"/>
 </p>
+The oscillatory dynamics (phugoid and dutch roll) are pretty well predicted by the uncoupled simplified models, as well as the slow heave and spiral modes, while the fast pitch and roll subsidence modes show quite a bit of error.
 
 [^1]: Peter.D. Talbot et al., "A Mathematical Model for a Single Main Rotor Helicopter for Piloted Simulation", NASA T.M. 84281, 1982 [link](https://ntrs.nasa.gov/citations/19830001781)
 [^2]: Raymond Prouty, "Helicopter Performance, Stability and Control", 1986
