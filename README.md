@@ -27,10 +27,10 @@ Then you can find two additional scripts:
 By using the script [step.m](/step.m) you can test the response of the helicopter model to a step input of the controls. The script also compares it to the prediction of the linearized model.\
 Here you see an example in a forward flight condition at 100ft altitude.
 <p align="center">
-<img src="/media/lon_cyc_step_ff_60kn.png" alt="Alt text" width="300"/>
-<img src="/media/lat_cyc_step_ff_60kn.png" alt="Alt text" width="300"/>
-<img src="/media/coll_step_ff_60kn.png" alt="Alt text" width="300"/>
-<img src="/media/ped_step_ff_60kn.png" alt="Alt text" width="300"/>
+<img src="/media/lon_cyc_step_ff_60kn.png" alt="Alt text" width="350"/>
+<img src="/media/lat_cyc_step_ff_60kn.png" alt="Alt text" width="350"/>
+<img src="/media/coll_step_ff_60kn.png" alt="Alt text" width="350"/>
+<img src="/media/ped_step_ff_60kn.png" alt="Alt text" width="350"/>
 </p>
 
 ### Stability analysis
@@ -42,13 +42,13 @@ Here we see the control inputs in level forward flight plotted against the fligh
 </p>
 Here instead we have on the left the eigenvalues for the hover condition and on the right the movement of the system poles in forward flight as the speed grows from 60 to 160 knots:
 <p align="center">
-<img src="/media/eig_hov.png" alt="Alt text" width="300"/>
-<img src="/media/eig_ff.png" alt="Alt text" width="300"/>
+<img src="/media/eig_hov.png" alt="Alt text" width="350"/>
+<img src="/media/eig_ff.png" alt="Alt text" width="350"/>
 </p>
 We can also separate the longitudinal and lateral directional dynamics, as is customary to do for fixed wing aircraft, and confront the predicted poles:
 <p align="center">
-<img src="/media/lon_eig_ff.png" alt="Alt text" width="300"/>
-<img src="/media/lat_eig_ff.png" alt="Alt text" width="300"/>
+<img src="/media/lon_eig_ff.png" alt="Alt text" width="350"/>
+<img src="/media/lat_eig_ff.png" alt="Alt text" width="350"/>
 </p>
 
 [^1]: Peter.D. Talbot et al., "A Mathematical Model for a Single Main Rotor Helicopter for Piloted Simulation", NASA T.M. 84281, 1982 [link](https://ntrs.nasa.gov/citations/19830001781)
