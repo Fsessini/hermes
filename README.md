@@ -22,7 +22,9 @@ Then you can find two additional scripts:
 - [linearization.m](7linearization.m): calculates the stability and control derivatives of the heli with centered finite differences. The linear model is the classic 6 DoF linearized rigid body dynamics used in aircraft flight dynamics. Since flapping angles are not considered as state variables, the main rotor dynamics are effectively neglected and its behavior is considered to be quasi-static. What this means practicaly is that derivatives are calculated disabling rigid body dynamics but letting the flapping reach steady state. This linearized model requires a steady symmetryc flight condition with null angular rates. The trim script needs to be run first.
 
 ### Response to controls
-By using the script [step.m](/step.m) you can test the response of the helicopter model to a step input of the controls. The script also compares it to the prediction of the linearized model. Here you see an example in a forward flight condition at 100ft altitude.
+By using the script [step.m](/step.m) you can test the response of the helicopter model to a step input of the controls. The script also compares it to the prediction of the linearized model.\
+Here you see an example in a forward flight condition at 100ft altitude.
+
 
 ### Stability analysis
 
