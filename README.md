@@ -45,7 +45,7 @@ Here instead we have on the left the eigenvalues for the hover condition and on 
 <img src="/media/eig_hov.png" alt="Alt text" width="350"/>
 <img src="/media/eig_ff.png" alt="Alt text" width="350"/>
 </p>
-The phugoid and dutch roll modes in hover are named like this for convenience, but they actually are, respectevely, a longitudinal/lateral and lateral/longitudinal coupled oscillation, and they later develope in the well known modes as the forward speed is increased.  
+The phugoid and dutch roll modes in hover are named like this for convenience, but they actually are, respectevely, a longitudinal/lateral and lateral/longitudinal coupled oscillation, and they later develope in the two familiar flight modes as the forward speed is increased. The same is true for the spiral, which in hover is a simple yaw subsidence mode.  
 We can also separate the longitudinal and lateral directional dynamics, as is customary to do for fixed wing aircraft, and confront the predicted poles:
 <p align="center">
 <img src="/media/lon_eig_ff.png" alt="Alt text" width="350"/>
