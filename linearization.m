@@ -10,6 +10,9 @@ mdl = "helicopter_sim";
 % select mode
 mode = 2;
 
+% load the model
+load_system(mdl)
+
 % disable euler dynamics
 set_param(mdl+"/HELICOPTER MODEL/6DOF RIGID BODY DYNAMICS",'Commented','on')
 

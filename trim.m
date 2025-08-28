@@ -11,6 +11,9 @@ mdl = "helicopter_sim";
 % select mode
 mode = 1;
 
+% load the model
+load_system(mdl)
+
 % disable euler dynamics
 set_param(mdl+"/HELICOPTER MODEL/6DOF RIGID BODY DYNAMICS",'Commented','on')
 
@@ -39,9 +42,6 @@ V0     = eul2rotm(euler0','XYZ')'*[ fc(1) fc(2) fc(3) ]'; % initial velocity in 
 
 % ----------------------
 function y = run_heli_ss(x,max_att,mdl,time)
-
-    % load the model
-    load_system(mdl)
 
     % Inputs unpacking
     pilot_trim   = [ x(1);   % lateral cyclic
