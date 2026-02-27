@@ -27,29 +27,29 @@ Then you can find two additional scripts:
 By using the script [step.m](/step.m) you can test the response of the helicopter model to a step input of the controls. The script also compares it to the prediction of the linearized model.\
 Here you see an example in a forward flight condition at 100ft altitude.
 <p align="center">
-<img src="/media/lon_cyc_step_ff_60kn.png" alt="Alt text" width="350"/>
-<img src="/media/lat_cyc_step_ff_60kn.png" alt="Alt text" width="350"/>
-<img src="/media/coll_step_ff_60kn.png" alt="Alt text" width="350"/>
-<img src="/media/ped_step_ff_60kn.png" alt="Alt text" width="350"/>
+<img src="/media/lon_cyc_step_ff_60kn.png" alt="Alt text" width="400"/>
+<img src="/media/lat_cyc_step_ff_60kn.png" alt="Alt text" width="400"/>
+<img src="/media/coll_step_ff_60kn.png" alt="Alt text" width="400"/>
+<img src="/media/ped_step_ff_60kn.png" alt="Alt text" width="400"/>
 </p>
 
 ### Stability analysis
 One of the main porpouses of an aircraft model is to evaluate static and dynamic stability across the flight envelope. The script [stability.m](/stability.m) trims and linearizes the heli for a range of forward flight speeds, then saves and plots the control inputs and the eigenvalues.\
 Here we see the control inputs in level forward flight plotted against the flight speed:
 <p align="center">
-<img src="/media/cyc_input_trim_ff.png" alt="Alt text" width="350"/>
-<img src="/media/coll_input_trim_ff.png" alt="Alt text" width="350"/>
+<img src="/media/cyc_input_trim_ff.png" alt="Alt text" width="400"/>
+<img src="/media/coll_input_trim_ff.png" alt="Alt text" width="400"/>
 </p>
 Here instead we have on the left the eigenvalues for the hover condition and on the right the movement of the system poles in forward flight as the speed grows from 60 to 160 knots:
 <p align="center">
-<img src="/media/eig_hov.png" alt="Alt text" width="350"/>
-<img src="/media/eig_ff.png" alt="Alt text" width="350"/>
+<img src="/media/eig_hov.png" alt="Alt text" width="500"/>
+<img src="/media/eig_ff.png" alt="Alt text" width="500"/>
 </p>
 The phugoid and dutch roll modes in hover are named like this for convenience, but they actually are, respectively, a longitudinal/lateral and lateral/longitudinal coupled oscillation, and they later develope in the two familiar flight modes as the forward speed is increased. The same is true for the spiral, which in hover is a simple yaw subsidence mode.  
 We can also separate the longitudinal and lateral directional dynamics, as is customary to do for fixed wing aircraft, and confront the predicted poles:
 <p align="center">
-<img src="/media/lon_eig_ff.png" alt="Alt text" width="350"/>
-<img src="/media/lat_eig_ff.png" alt="Alt text" width="350"/>
+<img src="/media/lon_eig_ff.png" alt="Alt text" width="500"/>
+<img src="/media/lat_eig_ff.png" alt="Alt text" width="500"/>
 </p>
 The oscillatory dynamics (phugoid and dutch roll) are pretty well predicted by the uncoupled simplified models, as well as the slow heave and spiral modes, while the fast pitch and roll subsidence modes show quite a bit of error.
 
